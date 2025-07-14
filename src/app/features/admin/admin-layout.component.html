@@ -1,0 +1,18 @@
+<div class="flex min-h-screen">
+   
+    <aside class="w-64 bg-gray-800 text-white flex flex-col p-4 space-y-4">
+        <h2 class="text-2xl font-bold mb-6">Admin</h2>
+        <hr>
+        <a routerLink = "/admin/home" class="hover:bg-gray-700 p-2 rounded">Dashboard</a>
+        <a routerLink = "/admin/books" class="hover:bg-gray-700 p-2 rounded">Manage Books</a>
+        <a routerLink = "/admin/users" class="hover:bg-gray-700 p-2 rounded">Users</a>
+        <a routerLink = "/admin/orders" class="hover:bg-gray-700 p-2 rounded">Orders</a>
+        <a routerLink = "/admin/restock" class="hover:bg-gray-700 p-2 rounded">Restock</a>
+        <a routerLink = "/" class="mt-auto bg-red-600 hover:bg-red-700 p-2 rounded text-center">Logout</a>
+    </aside>
+    
+
+    <main class="flex-1 bg-gray-100 p-6">
+        <router-outlet></router-outlet>
+    </main>
+</div>
