@@ -1,0 +1,17 @@
+<h1 class="text-3xl font-bold mb-6 text-center">Welcome</h1>
+<div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div *ngFor = "let book of books" class="bg-white p-5 rounded shadow hover:shadow-lg transition-all">
+        <h2>{{book.title}}</h2>
+        <p>{{book.author}}</p>
+        <p>{{book.price}}</p>
+
+        <div class="flex gap-3 mt-4">
+            <button (click)="addToWishlist(book)" class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded">
+                Add to Wishlist
+            </button>
+            <button (click)="addToCart(book)" class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>

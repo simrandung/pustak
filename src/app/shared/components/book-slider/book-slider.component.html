@@ -1,0 +1,17 @@
+<div class="h-screen flex items-center justify-center relative overflow-hidden">
+  <div class="absolute inset-0 z-0 transition-all duration-700 ease-in-out" [ngClass]="books[currentSlide].bg"></div>
+
+  <div class="z-10 text-center px-6">
+    <div class="slide p-10 bg-white bg-opacity-70 rounded-lg shadow-xl">
+      <img [src]="books[currentSlide].image" alt="Book Cover" class="h-64 mx-auto rounded">
+      <h2 class="text-3xl mt-4 font-bold">{{ books[currentSlide].title }}</h2>
+      <p class="text-gray-700 mt-2">A sample book slider inspired by Lun Dev's design, using Angular + Tailwind + GSAP.</p>
+    </div>
+
+    <div class="mt-6 space-x-4">
+      <button (click)="prevSlide()" class="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition">Prev</button>
+      <button (click)="nextSlide()" class="px-4 py-2 bg-black text-white rounded hover:bg-gray-800 transition">Next</button>
+    </div>
+  </div>
+</div>
+
